@@ -1,1 +1,121 @@
-# yane
+Claro — mantive toda a estrutura original e só troquei os exemplos para deixar mais práticos e variados:
+
+---
+
+🧩 Modos do Copiloto (Ask, Edit, Plan, Agent e Study)
+dio/me IA Prompt
+
+O Copiloto oferece diferentes modos de interação para você escolher como quer trabalhar: desde tirar dúvidas sem mexer no código, até editar trechos específicos, planejar mudanças maiores ou delegar tarefas mais complexas com um modo mais autônomo. A ideia é simples: você seleciona o modo que melhor combina com seu objetivo no momento e ganha velocidade com mais controle.
+
+---
+
+❓ Ask
+O modo Ask é para fazer perguntas e entender coisas, sem alterar seu código. Você pode perguntar sobre um arquivo específico, um erro, uma função, uma stack trace ou até conceitos gerais.
+
+O Copiloto lê o contexto do projeto (arquivos abertos, seleção, etc.) e responde como um “mentor técnico”, explicando o que está acontecendo e por quê. Ele não modifica nada — só analisa e explica.
+
+**Exemplos:**
+
+* "Por que essa função está retornando undefined?"
+* "O que esse erro 'Cannot read property of null' significa?"
+* "Explique o que esse hook useEffect está fazendo"
+* "Qual a diferença entre map e forEach nesse código?"
+
+📄 Prompt: prompts/prompt-ask.md
+
+---
+
+✏️ Edit
+O modo Edit serve para alterar código existente. Você seleciona um trecho (ou um arquivo inteiro), descreve o que quer mudar, e o Copiloto aplica a modificação diretamente.
+
+Ideal para:
+
+refactors
+ajustes de lógica
+melhoria de performance
+mudança de estilo
+conversão de linguagem
+adicionar logs
+tratar erros
+
+Aqui o foco é: “pegue isso que já existe e transforme”.
+
+**Exemplos:**
+
+* "Refatore essa função para usar async/await"
+* "Melhore a legibilidade desse código"
+* "Adicione tratamento de erro nesse trecho"
+* "Converta esse código de JavaScript para TypeScript"
+
+📄 Prompt: prompts/prompt-edit.md
+
+---
+
+🧭 Plan
+Quando você pede algo mais complexo, o Copiloto pode entrar em um modo de planejamento, onde ele pensa e descreve os passos antes de sair codando.
+
+Ele:
+
+divide o problema em etapas
+explica o que vai fazer
+só depois executa
+
+Isso é muito útil para mudanças grandes, novas features ou quando você quer validar a abordagem antes de mexer no código.
+
+**Exemplos:**
+
+* "Como implementar um sistema de autenticação com JWT?"
+* "Quais passos preciso seguir para criar uma API REST?"
+* "Planeje a estrutura de um app de tarefas com React"
+* "Como organizar um sistema de upload de arquivos?"
+
+📄 Prompt: prompts/prompt-plan.md
+
+---
+
+🤖 Agent
+O Agent é o modo mais “autônomo”. Ele pode navegar pelo projeto, criar arquivos, modificar múltiplos pontos e manter contexto entre passos, como se fosse um dev júnior trabalhando com você.
+
+Você dá um objetivo (ex.: “implemente login com JWT”) e ele decide o que precisa ser feito em vários arquivos para chegar lá.
+
+**Exemplos:**
+
+* "Crie um CRUD completo de usuários"
+* "Implemente autenticação com login e cadastro"
+* "Adicione paginação em toda a listagem de produtos"
+* "Integre essa aplicação com uma API externa"
+
+📄 Prompt: prompts/prompt-agent.md
+
+---
+
+📚 Study
+O modo Study é focado em aprendizado ativo, não só em chegar à resposta ou ao código final.
+
+Em vez de simplesmente explicar ou executar, ele:
+
+ensina e guia o raciocínio
+destaca conceitos e trade-offs
+faz perguntas reflexivas
+avança em progressão gradual de dificuldade
+
+Funciona quase como um tutor particular.
+
+**Exemplos:**
+
+* "Me ensine closures com exemplos simples e depois mais avançados"
+* "Quero aprender recursão passo a passo"
+* "Me faça perguntas para eu entender Promises"
+* "Explique Big-O como se eu fosse iniciante e depois aprofunde"
+
+📄 Prompt: prompts/prompt-study.md
+
+---
+
+🧠 Resumo mental rápido
+
+Ask → entender
+Plan → planejar antes de agir
+Edit → mudar código
+Agent → executar tarefas grandes sozinho
+Study → entendimento ativo
